@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.product-wrapper {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fit, 250px);
+}
+
+.product {
+  background-color: bisque;
+  display: block;
+  padding: 6px;
+  width: 250px;
+  text-align: center;
+}
+
+.product__image {
+  width: 100%;
+}
+
+.product__image img {
+  width: 100%;
+}
