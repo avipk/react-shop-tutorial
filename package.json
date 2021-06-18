@@ -13,7 +13,8 @@
   },
   "scripts": {
     "start": "concurrently \"nodemon ./api-server/server.js\" \"cd client && npm start\"",
-    "init-mongo": "node ./api-server/init-db/mongo-init.js"
+    "init-mongo": "node ./api-server/init-db/mongo-init.js",
+    "init-proj": "npm i && cd client && npm i"
   },
   "author": "",
   "license": "ISC"
