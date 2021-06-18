@@ -17,8 +17,16 @@ export default function SearchBar({ onSubmit }) {
 
   return (
     <form className="search" onSubmit={onFormSubmit}>
-      <input type="text" size="50" ref={inputRef} placeholder="חיפוש לפי שם מוצר" />
-      <button type="submit">חפש</button>
+      <input
+        className="search__input"
+        type="text"
+        size="50"
+        ref={inputRef}
+        placeholder="חיפוש לפי שם מוצר"
+      />
+      <button className="search__submit" type="submit">
+        חפש
+      </button>
     </form>
   );
 }

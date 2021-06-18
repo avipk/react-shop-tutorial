@@ -13,5 +13,5 @@ export default function ProductPage({
       .then((res) => res.json())
       .then((data) => setProduct(data));
   }, [id]);
-  return <main> {product ? <ProductPreview {...product} /> : null}</main>;
+  return <main className="product-page"> {product ? <ProductPreview {...product} /> : null}</main>;
 }

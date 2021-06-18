@@ -4,8 +4,11 @@ import SearchResults from '../components/searchResults';
 
 export default function MainPage() {
   const [results, setResults] = React.useState(null);
+  const [searchTerm, setSearchTerm] = React.useState(null);
 
   const doSearch = (value) => {
+    setSearchTerm(value);
+
     fetch(`/api-product/search/${value}`)
       .then((res) => res.json())
       .then((data) => setResults(data));
@@ -14,7 +17,7 @@ export default function MainPage() {
   return (
     <main>
       <SearchBar onSubmit={doSearch} />
-      <SearchResults results={results} />
+      <SearchResults results={results} searchTerm={searchTerm} />
     </main>
   );
 }
